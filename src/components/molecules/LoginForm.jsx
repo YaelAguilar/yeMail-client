@@ -39,7 +39,6 @@ const LoginForm = ({ onLogin }) => {
     );
 };
 
-
 LoginForm.propTypes = {
     onLogin: PropTypes.func.isRequired,
 };

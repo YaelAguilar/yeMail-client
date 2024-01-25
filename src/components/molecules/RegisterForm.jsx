@@ -43,5 +43,4 @@ RegisterForm.propTypes = {
     onRegister: PropTypes.func.isRequired,
 };
 
-
 export default RegisterForm;
