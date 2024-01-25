@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../hooks/useAuth';
 
 const NavBar = () => {
     const { user, logout } = useAuth();
@@ -15,10 +15,14 @@ const NavBar = () => {
                     </>
                 )}
                 {user && (
-                    <li>
-                        <button onClick={logout}>Cerrar Sesión</button>
-                        <Link to="/profile">Perfil</Link>
-                    </li>
+                    <>
+                        <li>
+                            <button onClick={logout}>Cerrar Sesión</button>
+                        </li>
+                        <li>
+                            <Link to="/profile">Perfil</Link>
+                        </li>
+                    </>
                 )}
             </ul>
         </nav>
